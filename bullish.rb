@@ -58,4 +58,8 @@ class Bullish
   def save
     @edition.save
   end
+
+  def save_template
+    @edition.save_template
+  end
 end
