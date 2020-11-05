@@ -53,9 +53,7 @@ module Templates
     def to_html
       mjml = compile
 
-      html = Services::Mjml.new(mjml).to_html
-
-      Services::Minifier.html(html)
+      Services::Mjml.new(mjml).to_html
     end
 
     def self.edition(edition)
