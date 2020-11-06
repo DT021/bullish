@@ -122,7 +122,7 @@ task :build_archive do
   archive.build_directory # TODO: can be optimized to run once a month
 end
 
-task :trending_stock_news do
+task :update_news do
   # TODO: temp run separately when general news
   Services::News::DB.reset
 
@@ -131,6 +131,10 @@ task :trending_stock_news do
   end.flatten.compact
 
   Services::News::DB.save(items: news) if news.any?
+end
+
+task :news do
+  pp Services::News::DB.all.collect(&:headline)
 end
 
 task :reset_news do

@@ -31,7 +31,8 @@ module Services
           )
         end
       rescue StandardError => e
-        Services::Log.error("#{symbol} - #{e.message}")
+        unknown_symbol = e.message.match?('Unknown symbol')
+        Services::Log.error("#{symbol} - #{e.message}") unless unknown_symbol
         nil
       end
     end

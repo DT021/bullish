@@ -60,7 +60,7 @@ module Editions
         bitcoin_performance,
         Templates::Element.spacer('20px'),
         Templates::Element.divider,
-        trending(4)
+        trending(3)
       ]
     end
 
@@ -70,7 +70,7 @@ module Editions
         treasury_performance,
         Templates::Element.spacer('20px'),
         Templates::Element.divider,
-        trending(5)
+        trending(3)
       ]
     end
 
